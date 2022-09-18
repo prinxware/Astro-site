@@ -1,0 +1,115 @@
+---
+import MyLayout from '../layouts/MyLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Intro from '../components/Intro.astro';
+import Steps from '../components/Steps.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Styles from '../styles/global.scss';
+---
+
+<MyLayout>
+	<Navbar/>
+	<main class="hero">
+		<div class="bigscreen">
+			<h1>Exchange Made Easy!</h1>
+			<p>Buy and sell your crypto and giftcards, fast and safe, the easy way.</p>
+			<a href="#getStarted" class="btn">Get started <i class="fa-solid fa-arrow-right"></i></a>
+		</div>
+	</main>
+	<Intro/>
+	<Steps/>
+	<Testimonials/>
+</MyLayout>
+
+<!------------------------------------styles------------------------------ -->
+<style lang="scss">
+	$primary-color:black;
+    $secondary-color:#6F75E8;
+    $light-color:#A594F9;
+    $font-stack:'Roboto', sans-serif;
+.hero{
+	width: 100%;
+	font-family: $font-stack;
+	padding: 4rem 2rem;
+	text-align: center;
+	background-color: $secondary-color;
+	min-height: 55vh; 
+	img{
+		width:100%;
+		
+	}
+	.bigscreen{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+	h1{
+		margin-top:5rem;
+		color: white;
+		font-size: 38px;
+		font-weight: 700;
+	}
+	p{
+		margin-top: .3rem;
+		color: white;
+		font-size: 13px;
+		font-weight: 300;
+	}
+	.btn{
+		border-style: none;
+		background-color: $light-color;
+		width: 18rem;
+		min-height: 40px;
+		margin-top: 1rem;
+		padding: .9rem 0;
+		border-radius: 5px;
+		color: white;
+	}
+}
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+	.hero{
+		padding-top:2rem;
+		width: 100%;
+		font-family: $font-stack;
+		padding: 8rem 2rem;
+		text-align: center;
+		background-color: $secondary-color; 
+		min-height: 70vh; 
+		.bigscreen{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		h1{
+			color: white;
+			font-size: 95px;
+			font-weight: 700;
+		}
+		p{
+			margin-top: .7rem;
+			color: white;
+			font-size: 20px;
+			font-weight: 300;
+		}
+		.btn{
+			border-style: none;
+			background-color: $light-color;
+			width:25%;
+			min-height: 40px;
+			margin-top: 1rem;
+			padding: 1.1rem 0;
+			border-radius: 5px;
+			text-align: center;
+			cursor: pointer;
+			color: white;	
+			transition: 0.3s;
+		}
+		.btn:hover{
+			background-color: white;
+			color: $secondary-color;
+		}
+	}
+}
+</style>

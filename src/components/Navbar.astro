@@ -1,0 +1,124 @@
+---
+import styles from '../styles/global.scss'
+---
+
+<header>
+    <nav>
+        <div class="logo">
+            <a href="">AsapXchange</a>
+        </div>
+        <ul>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="#intro">About</a>
+            </li>
+            <li>
+                <a href="#footer">Contact</a>
+            </li>
+        </ul>
+        <a href="" class="btn">Live trade</a>
+    </nav>
+</header>
+
+<style lang="scss">
+
+    $primary-color:#333232;
+    $secondary-color:#6F75E8;
+    $light-color:#A594F9;
+    $font-stack:'Roboto', sans-serif;
+    nav{
+        position: fixed;
+        top: 0;
+        overflow: hidden;
+        font-family: $font-stack;
+        width: 100%;
+        min-height: 8vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1.2rem;
+        background-color: white;
+        .logo a{
+            color: $secondary-color;
+            font-size: 17px;
+            font-weight: 600;
+        }
+        ul{
+            display: none;
+        }
+        .btn{
+            font-size: 13px;
+            font-weight: 500;
+            padding: .7rem .6rem;
+            color: $light-color;
+            border: 2px solid $light-color;
+            background:transparent;
+            border-radius: 3px;
+        }
+        .btn:hover{
+            background-color: $light-color;
+            color: white;
+        }
+    }
+    @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+        nav{
+            position: fixed;
+            top: 0;
+            overflow: hidden;
+            font-family: $font-stack;
+            width: 100%;
+            min-height: 9vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+            background-color: white;
+            .logo a{
+                color: $secondary-color;
+                font-size: 22px;
+                font-weight: 700;
+            }
+            .logo a:hover{
+                color: $light-color;
+                transition: 0.3s;
+            }
+            ul{
+                display: flex;
+                align-items: center;
+                justify-content:center;
+                gap: 4rem;
+                a{
+                    color: $light-color;
+                    font-size: 13px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    transition: 0.3s;
+                    padding: 1rem;
+                    display: block;
+                    border-radius: 5px;
+                }
+                a:hover{
+                    background-color: $light-color;
+                    color: white;
+                }
+            }
+            .btn{
+            font-size: 13px;
+            font-weight: 500;
+            padding: .8rem 1rem;
+            color: $light-color;
+            border: 3px solid $light-color;
+            background:transparent;
+            border-radius: 3px;
+            transition: 0.3s;
+            }
+            .btn:hover{
+                background-color: $light-color;
+                color: white;
+            }
+                
+        }
+    }
+</style>
