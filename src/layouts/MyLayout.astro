@@ -1,0 +1,116 @@
+---
+export interface props{
+	title?:string;
+}
+const { title = 'AsapXchange: Buy and sell cryptocurrencies and giftcards easy.' }= Astro.props as props;
+---
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> 
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+		<footer class="footer" id="footer">
+			<h1>AsapX Ltd</h1>
+			<p>Copyrights @AsapXchange Ltd 2022. All rights reserved.</p>
+			<div class="socials">
+				<ul>
+					<li>
+						<a href=""><i class="fa-brands fa-facebook-f"></i></a>
+					</li>
+					<li>
+						<a href=""><i class="fa-brands fa-whatsapp"></i></a>
+					</li>
+					<li>
+						<a href=""><i class="fa-brands fa-instagram"></i></a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+	</body>
+</html>
+<style lang="scss">
+	$primary-color:#222222;
+    $secondary-color:#6F75E8;
+    $light-color:#A594F9;
+    $font-stack:'Roboto', sans-serif;
+	.footer{
+		font-family: $font-stack;
+		padding: 2rem 2rem;
+		width: 100%;
+		min-height: 27vh;
+		background-color: $primary-color;
+		color: white;
+		text-align: center;
+		h1{
+			font-weight: 500;
+			font-size: 30px;
+			margin-bottom: .6rem;
+		}
+		p{
+			font-size: 13px;
+			font-weight: 400;
+		}
+		ul{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			li{
+				padding: .6rem;
+				font-size: 30px;
+				a{
+					color: white;
+				}
+			}
+		}
+	}
+	@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1){
+		.footer{
+		font-family: $font-stack;
+		padding: 3rem 3rem;
+		width: 100%;
+		min-height: 23vh;
+		background-color: $primary-color;
+		color: white;
+		text-align: center;
+		h1{
+			font-weight: 600;
+			font-size: 47px;
+			margin-bottom: .7rem;
+		}
+		p{
+			font-size: 17px;
+			font-weight: 400;
+		}
+		ul{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			li{
+				padding: 1rem;
+				font-size: 40px;
+				a{
+					color: white;
+					transition: 0.3s;
+				}
+				a:hover{
+					color: $secondary-color;
+				}
+			}
+		}
+	}
+	}
+
+</style>
